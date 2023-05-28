@@ -1,26 +1,404 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --w: 100%;
+  --h: 100%;
+  --glow: #2d0e01;
+  --text-color: #bf001a;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    160deg,
+    hsl(0deg 0% 0%) 0%,
+    hsl(197deg 60% 2%) 13%,
+    hsl(194deg 57% 5%) 25%,
+    hsl(204deg 47% 4%) 37%,
+    hsl(240deg 29% 3%) 50%,
+    hsl(220deg 26% 3%) 63%,
+    hsl(204deg 24% 4%) 75%,
+    hsl(250deg 25% 5%) 87%,
+    hsl(270deg 42% 5%) 100%
+  );
+  background-attachment: fixed;
+  height: 100vh;
+}
 
 #app {
-    display: flex;
-    justify-content: center;
-    margin-left: 15%;
-    border: 1px solid red;
-    color: red;
-    height: 100vh;
-    width: 70%;
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: italic;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 1rem;
+  width: 100vw;
+  height: 100vh;
+  background-attachment: scroll;
+  gap: 3rem;
 }
+
+h1 {
+  text-align: center;
+  flex-basis: 100%;
+  font-size: 200%;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 200%;
+  padding-bottom: 5rem;
+  text-align: center;
+  flex-basis: 100%;
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: goldenrod;
+}
+
+img {
+  width: 65vw;
+  max-width: 1000px;
+  pointer-events: none;
+}
+
+@layer stak {
+  #base__container_layer {
+    position: relative;
+    backface-visibility: hidden; /* important */
+    overflow: hidden;
+    border-radius: 4.55% / 3.5%;
+    transition-duration: 3000ms;
+  }
+
+  /* rengoku --------------------------------------------------------------*/
+  .base__image {
+    border-radius: 4.55% / 3.5%;
+    transition-duration: 2990ms;
+    border-bottom: 0.3rem solid var(--glow);
+  }
+
+  .sizing__layer {
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 0;
+    background-size: 100%;
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid var(--glow);
+    transition-duration: 3000ms;
+  }
+
+  .gradient__layer {
+    mix-blend-mode: difference;
+    background-image: linear-gradient(
+      90deg,
+      hsl(240deg 100% 20%) 0%,
+      hsl(298deg 100% 30%) 8%,
+      hsl(357deg 100% 40%) 17%,
+      hsl(55deg 100% 50%) 25%,
+      hsl(37deg 78% 34%) 33%,
+      hsl(18deg 55% 17%) 42%,
+      hsl(0deg 33% 1%) 50%,
+      hsl(306deg 55% 17%) 58%,
+      hsl(253deg 78% 34%) 67%,
+      hsl(199deg 100% 50%) 75%,
+      hsl(199deg 100% 33%) 83%,
+      hsl(199deg 100% 17%) 92%,
+      hsl(0deg 0% 0%) 100%
+    );
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid var(--glow);
+    opacity: 0;
+  }
+
+  .masking__layer {
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid var(--glow);
+    mix-blend-mode: screen;
+    background-image: url(./assets/rengoku-desat-black.jpg);
+    transition-duration: 3000ms;
+    opacity: 0.1;
+  }
+
+  /*  Steve --------------------------------------------------------------*/
+
+  .base__image_steve {
+    background-color: green;
+    border-radius: 4.55% / 3.5%;
+    transition-duration: 2950ms;
+    border-bottom: 0.3rem solid green;
+  }
+
+  .sizing__layer_steve {
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 0;
+    background-size: 100%;
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid green;
+    transition-duration: 3000ms;
+  }
+
+  .gradient__layer_steve {
+    mix-blend-mode: difference;
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid green;
+    background: green;
+    background-image: linear-gradient(
+      45deg,
+      hsl(249deg 95% 36%) 0%,
+      hsl(312deg 100% 37%) 14%,
+      hsl(335deg 100% 50%) 20%,
+      hsl(5deg 100% 61%) 24%,
+      hsl(38deg 100% 50%) 29%,
+      hsl(55deg 100% 50%) 33%,
+      hsl(47deg 100% 50%) 36%,
+      hsl(39deg 100% 50%) 40%,
+      hsl(30deg 100% 50%) 43%,
+      hsl(20deg 100% 50%) 47%,
+      hsl(0deg 100% 50%) 50%,
+      hsl(19deg 100% 50%) 53%,
+      hsl(29deg 100% 50%) 57%,
+      hsl(37deg 100% 50%) 60%,
+      hsl(44deg 100% 50%) 64%,
+      hsl(51deg 100% 50%) 67%,
+      hsl(84deg 76% 59%) 71%,
+      hsl(148deg 78% 57%) 76%,
+      hsl(174deg 100% 44%) 80%,
+      hsl(187deg 100% 47%) 86%,
+      hsl(194deg 100% 50%) 100%
+    );
+    opacity: 0;
+  }
+
+  .masking__layer_steve {
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid green;
+    mix-blend-mode: screen;
+    background-image: url(./public/assets/turts.jpeg);
+    transition-duration: 3000ms;
+    opacity: 0.2;
+  }
+
+  /*  Jordan --------------------------------------------------------------*/
+  .base__image_jordan {
+    border-radius: 4.55% / 3.5%;
+    transition-duration: 2950ms;
+    border-bottom: 0.3rem solid #09010a;
+  }
+
+  .sizing__layer_jordan {
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 0;
+    background-size: 100%;
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid #09010a;
+    transition-duration: 3000ms;
+  }
+
+  .gradient__layer_jordan {
+    mix-blend-mode: difference;
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid #09010a;
+    background: #9d9a46;
+    background-image: radial-gradient(
+      at left center,
+      hsl(249deg 95% 36%) 0%,
+      hsl(312deg 100% 37%) 14%,
+      hsl(335deg 100% 50%) 20%,
+      hsl(5deg 100% 61%) 24%,
+      hsl(38deg 100% 50%) 29%,
+      hsl(55deg 100% 50%) 33%,
+      hsl(47deg 100% 50%) 36%,
+      hsl(39deg 100% 50%) 40%,
+      hsl(30deg 100% 50%) 43%,
+      hsl(20deg 100% 50%) 47%,
+      hsl(0deg 100% 50%) 50%,
+      hsl(19deg 100% 50%) 53%,
+      hsl(29deg 100% 50%) 57%,
+      hsl(37deg 100% 50%) 60%,
+      hsl(44deg 100% 50%) 64%,
+      hsl(51deg 100% 50%) 67%,
+      hsl(84deg 76% 59%) 71%,
+      hsl(148deg 78% 57%) 76%,
+      hsl(174deg 100% 44%) 80%,
+      hsl(187deg 100% 47%) 86%,
+      hsl(194deg 100% 50%) 100%
+    );
+    opacity: 0;
+  }
+
+  .masking__layer_jordan {
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid #09010a;
+    mix-blend-mode: hard-light;
+    background-image: url(./public/assets/jordan-1988-desat-whiter.jpg);
+    transition-duration: 3000ms;
+    opacity: 0;
+  }
+
+  /*  Percie --------------------------------------------------------------- */
+  .base__image_percie {
+    border-radius: 4.55% / 3.5%;
+    transition-duration: 2950ms;
+    border-bottom: 0.3rem solid #09010a;
+  }
+
+  .sizing__layer_percie {
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 0;
+    background-size: 100%;
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid #09010a;
+    transition-duration: 3000ms;
+  }
+
+  .gradient__layer_percie {
+    mix-blend-mode: exclusion;
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid #09010a;
+
+    background-image: linear-gradient(
+      300deg,
+      hsl(273deg 88% 23%) 0%,
+      hsl(286deg 90% 29%) 19%,
+      hsl(295deg 92% 35%) 26%,
+      hsl(279deg 70% 30%) 33%,
+      hsl(243deg 63% 23%) 39%,
+      hsl(258deg 56% 23%) 47%,
+      hsl(271deg 49% 23%) 57%,
+      hsl(248deg 32% 19%) 71%,
+      hsl(199deg 59% 11%) 100%
+    );
+    opacity: 0;
+  }
+
+  .masking__layer_percie {
+    border-radius: 4.55% / 3.5%;
+    border-bottom: 0.3rem solid #09010a;
+    mix-blend-mode: difference;
+    background-image: url(./assets/percie-cosmos.jpg);
+    transition-duration: 3000ms;
+    opacity: 0;
+  }
+}
+
+/* hovers -------------------- */
+
+.rengoku:active .base__image {
+  transform: rotateX(30deg) rotateY(5deg);
+  user-select: none;
+}
+
+.rengoku:active .sizing__layer {
+  transform: rotateX(30deg) rotateY(5deg);
+  user-select: none;
+}
+
+.rengoku:active .gradient__layer {
+  opacity: 0.7;
+  filter: hue-rotate(500deg);
+  user-select: none;
+}
+
+.rengoku:active .masking__layer {
+  transform: rotateX(-1deg);
+  filter: blur(2px);
+  filter: hue-rotate(180deg);
+  opacity: 0.8;
+  user-select: none;
+}
+
+/* steve */
+.steve:active .base__image_steve {
+  transform: rotateX(20deg) rotateY(20deg);
+  user-select: none;
+  opacity: 1;
+}
+
+.steve:active .sizing__layer_steve {
+  transform: rotateX(20deg) rotateY(20deg);
+  user-select: none;
+}
+
+.steve:active .gradient__layer_steve {
+  opacity: 0.4;
+  filter: hue-rotate(800deg);
+  user-select: none;
+}
+
+.steve:active .masking__layer_steve {
+  transform: rotateX(-1deg);
+  filter: hue-rotate(90deg);
+  opacity: 0.8;
+  user-select: none;
+}
+
+/* jordan */
+.jordan:active .base__image_jordan {
+  transform: rotateX(-10deg) rotateY(20deg);
+  user-select: none;
+}
+
+.jordan:active .sizing__layer_jordan {
+  transform: rotateX(-10deg) rotateY(20deg);
+  user-select: none;
+}
+
+.jordan:active .gradient__layer_jordan {
+  opacity: 1;
+  filter: hue-rotate(700deg);
+  user-select: none;
+}
+
+.jordan:active .masking__layer_jordan {
+  transform: rotateX(-1deg);
+  filter: hue-rotate(90deg);
+  opacity: 0.8;
+  user-select: none;
+}
+
+/* percie only*/
+
+.percie:active .base__image_percie {
+  filter: saturate(200%) hue-rotate(180deg) contrast(300%) brightness(40%);
+  transform: rotateX(15deg) rotateY(-15deg);
+  user-select: none;
+}
+
+.percie:active .sizing__layer_percie {
+  transform: rotateX(15deg) rotateY(-15deg);
+  user-select: none;
+}
+
+.percie:active .gradient__layer_percie {
+  opacity: 1;
+  filter: hue-rotate(500deg);
+  user-select: none;
+}
+
+.percie:active .masking__layer_percie {
+  transform: rotateX(-1deg);
+  filter: blur(2px);
+  filter: hue-rotate(180deg);
+  opacity: 0.8;
+  user-select: none;
+}
+/* percie only end*/
