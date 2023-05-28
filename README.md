@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://res.cloudinary.com/dpc3zrcvs/image/upload/q_27/v1685257869/kyojuro-holo_lrv6gb.gif" alt="kyojuro">
+<img src="https://res.cloudinary.com/dpc3zrcvs/image/upload/v1685260471/kyojuro-holo_gndgek.gif" alt="kyojuro">
 <br/>
 <br/>
 
@@ -7,5 +7,5 @@
 </div>
   A small project testing the creation of a holographic FX using only CSS and HTML <br/>
 
-https://holographic-css-fx.netlify.app
+[Demo Site](https://holographic-css-fx.netlify.app)
 
