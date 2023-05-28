@@ -197,7 +197,7 @@ img {
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid green;
     mix-blend-mode: screen;
-    background-image: url(./public/assets/turts.jpeg);
+    background-image: url(./public/assets/turts.jpg);
     transition-duration: 3000ms;
     opacity: 0.2;
   }
