@@ -127,7 +127,7 @@ img {
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid var(--glow);
     mix-blend-mode: screen;
-    background-image: url(./assets/rengoku-desat-black.jpg);
+    background-image: url(./public/assets/rengoku-desat-black.jpg);
     transition-duration: 3000ms;
     opacity: 0.1;
   }
@@ -294,7 +294,7 @@ img {
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid #09010a;
     mix-blend-mode: difference;
-    background-image: url(./assets/percie-cosmos.jpg);
+    background-image: url(./public/assets/percie-cosmos.jpg);
     transition-duration: 3000ms;
     opacity: 0;
   }
