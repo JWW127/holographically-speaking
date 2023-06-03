@@ -50,6 +50,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-attachment: scroll;
+    transform-style: preserve-3d;
   gap: 3rem;
 }
 
@@ -87,14 +88,14 @@ img {
     position: relative;
     backface-visibility: hidden; /* important */
     border-radius: 4.55% / 3.5%;
-    transition-duration: 3000ms;
-        perspective: 190rem;
+    transition-duration: 1000ms;
+    perspective: 190rem;
   }
 
   /* rengoku --------------------------------------------------------------*/
   .base__image {
     border-radius: 4.55% / 3.5%;
-    transition-duration: 2990ms;
+    transition-duration: 990ms;
     border-bottom: 0.3rem solid var(--glow);
   }
 
@@ -106,7 +107,7 @@ img {
     background-size: 100%;
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid var(--glow);
-    transition-duration: 3000ms;
+    transition-duration: 1000ms;
   }
 
   .gradient__layer {
@@ -137,7 +138,7 @@ img {
     border-bottom: 0.3rem solid var(--glow);
     mix-blend-mode: screen;
     background-image: url(./public/assets/rengoku-desat-black.jpg);
-    transition-duration: 3000ms;
+    transition-duration: 1000ms;
     opacity: 0.1;
   }
 
@@ -146,7 +147,7 @@ img {
   .base__image_steve {
     background-color: green;
     border-radius: 4.55% / 3.5%;
-    transition-duration: 2950ms;
+    transition-duration: 1000ms;
     border-bottom: 0.3rem solid green;
   }
 
@@ -158,7 +159,7 @@ img {
     background-size: 100%;
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid green;
-    transition-duration: 3000ms;
+    transition-duration: 1000ms;
   }
 
   .gradient__layer_steve {
@@ -196,16 +197,16 @@ img {
   .masking__layer_steve {
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid green;
-    mix-blend-mode: screen;
+    mix-blend-mode: difference;
     background-image: url(./public/assets/turts.jpg);
-    transition-duration: 3000ms;
-    opacity: 0.2;
+    transition-duration: 1000ms;
+    opacity: 0.4;
   }
 
   /*  Jordan --------------------------------------------------------------*/
   .base__image_jordan {
     border-radius: 4.55% / 3.5%;
-    transition-duration: 2950ms;
+    transition-duration: 1000ms;
     border-bottom: 0.3rem solid #09010a;
   }
 
@@ -217,7 +218,7 @@ img {
     background-size: 100%;
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid #09010a;
-    transition-duration: 3000ms;
+    transition-duration: 1000ms;
   }
 
   .gradient__layer_jordan {
@@ -257,14 +258,14 @@ img {
     border-bottom: 0.3rem solid #09010a;
     mix-blend-mode: hard-light;
     background-image: url(./public/assets/jordan-1988-desat-whiter.jpg);
-    transition-duration: 3000ms;
+    transition-duration: 1000ms;
     opacity: 0;
   }
 
   /*  Percie --------------------------------------------------------------- */
   .base__image_percie {
     border-radius: 4.55% / 3.5%;
-    transition-duration: 2950ms;
+    transition-duration: 1000ms;
     border-bottom: 0.3rem solid #09010a;
   }
 
@@ -276,7 +277,7 @@ img {
     background-size: 100%;
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid #09010a;
-    transition-duration: 3000ms;
+    transition-duration: 1000ms;
   }
 
   .gradient__layer_percie {
@@ -304,7 +305,7 @@ img {
     border-bottom: 0.3rem solid #09010a;
     mix-blend-mode: difference;
     background-image: url(./public/assets/percie-cosmos.jpg);
-    transition-duration: 3000ms;
+    transition-duration: 1000ms;
     opacity: 0;
   }
 }
@@ -339,6 +340,7 @@ img {
 .steve:active .base__image_steve {
   transform: rotateX(20deg) rotateY(20deg);
   user-select: none;
+    
   opacity: 1;
 }
 
@@ -348,7 +350,7 @@ img {
 }
 
 .steve:active .gradient__layer_steve {
-  opacity: 0.4;
+  opacity: 0.3;
   filter: hue-rotate(800deg);
   user-select: none;
 }
@@ -356,7 +358,7 @@ img {
 .steve:active .masking__layer_steve {
   transform: rotateX(-1deg);
   filter: hue-rotate(90deg);
-  opacity: 0.8;
+  opacity: 1;
   user-select: none;
 }
 
