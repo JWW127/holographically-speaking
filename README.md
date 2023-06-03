@@ -9,3 +9,7 @@
 
 [Demo Site](https://holographic-css-fx.netlify.app)
 
+```diff
+something weird going on with mobile, jordan works but the rest dont?
+```
+
