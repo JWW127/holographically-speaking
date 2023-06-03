@@ -167,8 +167,7 @@ img {
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid green;
     background: green;
-    background-image: linear-gradient(
-      45deg,
+    background-image: radial-gradient(
       hsl(249deg 95% 36%) 0%,
       hsl(312deg 100% 37%) 14%,
       hsl(335deg 100% 50%) 20%,
