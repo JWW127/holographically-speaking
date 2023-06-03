@@ -77,8 +77,8 @@ a:hover {
 }
 
 img {
-  width: 65vw;
-  max-width: 1000px;
+  width: 50vw;
+  max-width: 900px;
   pointer-events: none;
 }
 
@@ -86,9 +86,9 @@ img {
   #base__container_layer {
     position: relative;
     backface-visibility: hidden; /* important */
-    overflow: hidden;
     border-radius: 4.55% / 3.5%;
     transition-duration: 3000ms;
+        perspective: 190rem;
   }
 
   /* rengoku --------------------------------------------------------------*/
@@ -226,7 +226,7 @@ img {
     border-bottom: 0.3rem solid #09010a;
     background: #9d9a46;
     background-image: radial-gradient(
-      at left center,
+      at 14% 40%,
       hsl(249deg 95% 36%) 0%,
       hsl(312deg 100% 37%) 14%,
       hsl(335deg 100% 50%) 20%,
