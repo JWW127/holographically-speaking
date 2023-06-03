@@ -256,7 +256,7 @@ img {
   .masking__layer_jordan {
     border-radius: 4.55% / 3.5%;
     border-bottom: 0.3rem solid #09010a;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
     background-image: url(./public/assets/jordan-1988-desat-whiter.jpg);
     transition-duration: 1000ms;
     opacity: 0;
